@@ -37,7 +37,7 @@ for (let i = 0; i < 5; i++) {
 }
 
 for (let i = 0; i < arr.length; i++){
-    alert(`OBJETO ${i} \nPRODUCTO ${arr[i].producto} \nPRECIO ${arr[i].costo}`)
+    alert(`OBJETO ${i+1} \nPRODUCTO ${arr[i].producto} \nPRECIO ${arr[i].costo}`)
 }
 
 function descuento(){
@@ -51,7 +51,7 @@ function descuento(){
         } else {
             alert('codigo invalido')
         }
-    } else if (descuento == 'no' || (descuento) == "NO" || (descuento) == "No"){
+    } else if (descuento == 'no' || descuento == "NO" || descuento == "No"){
         // alert(`El ${producto} cuesta $${costo}`)
     }
     else {
@@ -59,22 +59,5 @@ function descuento(){
     }
 }
 
-// function agregar(ingreso) {
-//     if (ingreso == 1){
-//         costo = 10;
-//         producto = "Combo perro";
-//         descuento()
-//     } else if (ingreso == 2){
-//         costo = 8;
-//         producto = "Combo gato";
-//         descuento()
-//     } else if (ingreso == 3){
-//         producto = "Combo mixto";
-//         costo = 15;
-//         descuento()
-//     } else {
-//         alert("Opcion incorrecta")
-//     }
-// }
-
-// agregar(ingreso)
+let precioTotal = arr.reduce((acc, e) => acc + e.costo, 0)
+alert(`El precio final es de su compra es de $${precioTotal}`)
