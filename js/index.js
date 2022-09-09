@@ -61,3 +61,16 @@ function descuento(){
 
 let precioTotal = arr.reduce((acc, e) => acc + e.costo, 0)
 alert(`El precio final es de su compra es de $${precioTotal}`)
+
+
+let donar = document.getElementById("donar")
+for (const i of arr) {
+    let contenedor = document.createElement("div")
+    contenedor.innerHTML = `<h2>${i.producto}</h2>
+                            <p>${i.costo}</p>`
+    donar.append(contenedor)
+}
+
+let mensajePrecioTotal = document.createElement("h3")
+mensajePrecioTotal.innerText = `El costo total es de ${precioTotal}`
+donar.append(mensajePrecioTotal)

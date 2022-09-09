@@ -34,11 +34,41 @@ ul li {
 
 /****TABLET****/
 @media (min-width: 481px) and (max-width: 1023px) {
-
+    #cabeza {
+        background-image: linear-gradient(to right, #3eadcf, #abe9cd)
+    }
+    
+    ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    ul li {
+        font-size: 20px;
+        list-style-type: none;
+        margin: 0.5em;
+        padding: 0.4rem;
+    } 
 }
 
 /****SMARTPHONE****/
 @media (max-width: 480px) {
-
+    #cabeza {
+        background-image: linear-gradient(to right, #3eadcf, #abe9cd)
+    }
+    
+    ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    
+    ul li {
+        font-size: 15px;
+        list-style-type: none;
+        margin: 0.4em;
+        padding: 0.3rem;
+    } 
 }
 
