@@ -14,7 +14,7 @@ class Personas {
 
 var arr = []
 
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 3; i++) {
     let ingreso = prompt(`Ingresar producto al carrito \n1- Combo perro \n2- Combo gato \n3-Combo mixto`);
     if (ingreso == 1){
         costo = 10;
@@ -62,7 +62,7 @@ function descuento(){
 let precioTotal = arr.reduce((acc, e) => acc + e.costo, 0)
 alert(`El precio final es de su compra es de $${precioTotal}`)
 
-
+// DOM
 let donar = document.getElementById("donar")
 for (const i of arr) {
     let contenedor = document.createElement("div")
@@ -74,3 +74,18 @@ for (const i of arr) {
 let mensajePrecioTotal = document.createElement("h3")
 mensajePrecioTotal.innerText = `El costo total es de ${precioTotal}`
 donar.append(mensajePrecioTotal)
+
+// EVENTO SECCION DONAR
+let botonDonar = document.getElementById("botonDonar")
+botonDonar.addEventListener("click", clickDonar)
+function clickDonar(){
+    alert("Gracias por donar!");
+}
+
+// EVENTO SECCION SERVICIO DE PASEO DE PERROS
+let botonPaseo = document.getElementById("botonContactarPaseo")
+botonPaseo.addEventListener("click", clickPaseo)
+function clickPaseo (i) {
+    i.preventDefault()
+    alert("Gracias por elegir nuestro servicio de paseo")
+}
