@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,700&display=swap');
 
 * {
     margin: 0;
@@ -6,7 +7,7 @@
 }
 
 body {
-    font-family: 'Ubuntu Mono', monospace;
+ font-family: "Roboto", sans-serif;
 }
 
 /****DESKTOP****/
@@ -27,8 +28,72 @@ ul li {
     list-style-type: none;
     margin: 0.7em;
     padding: 0.5rem;
-} 
+}
 
+ul li a {
+    list-style-type: none !important;
+    text-decoration: none;
+    color: black;
+}
+
+#inicio {
+    display: flex;
+    justify-content: center;
+}
+
+#inicio img{
+    width: 100%;
+    height: 680px;
+    position: relative;
+}
+
+#inicio h1 {
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    /* font-weight: 700; */
+    font-size: 4.5rem;
+    font-family: 'Kanit', sans-serif;
+    width: 700px;
+}
+
+#carouselExampleIndicators {
+    width: 50%;
+}
+
+.max {
+    max-height: 450px;
+}
+
+.texto {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+}
+
+h2 {
+    font-size: 35px;
+    margin: 20px;
+    background-color: rgb(219, 203, 203);
+    max-width: 550px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 23px;
+    margin: 20px 40px;
+    max-width: 500px;
+}
+
+#sobremm {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
 
 }
 

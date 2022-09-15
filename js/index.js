@@ -36,6 +36,7 @@ for (let i = 0; i < 3; i++) {
     alert(`Su ${objeto1.producto} cuesta ${objeto1.costo}`)
 }
 
+
 for (let i = 0; i < arr.length; i++){
     alert(`OBJETO ${i+1} \nPRODUCTO ${arr[i].producto} \nPRECIO ${arr[i].costo}`)
 }
@@ -89,3 +90,13 @@ function clickPaseo (i) {
     i.preventDefault()
     alert("Gracias por elegir nuestro servicio de paseo")
 }
+
+// STORAGE
+// localStorage.setItem("Autor", "Renzo")
+// localStorage.setItem("Ciudad", "Mendoza")
+
+// let arrStorage = JSON.parse(arr)
+localStorage.setItem("carrito", JSON.stringify(arr))
+
+let obtenerStorage = localStorage.getItem("carrito")
+console.log(JSON.parse(obtenerStorage));
