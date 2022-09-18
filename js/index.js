@@ -67,8 +67,8 @@ alert(`El precio final es de su compra es de $${precioTotal}`)
 let donar = document.getElementById("donar")
 for (const i of arr) {
     let contenedor = document.createElement("div")
-    contenedor.innerHTML = `<h2>${i.producto}</h2>
-                            <p>${i.costo}</p>`
+    contenedor.innerHTML = `<h3>${i.producto}</h3>
+                            <p class="textoDonar">${i.costo}</p>`
     donar.append(contenedor)
 }
 
@@ -92,10 +92,6 @@ function clickPaseo (i) {
 }
 
 // STORAGE
-// localStorage.setItem("Autor", "Renzo")
-// localStorage.setItem("Ciudad", "Mendoza")
-
-// let arrStorage = JSON.parse(arr)
 localStorage.setItem("carrito", JSON.stringify(arr))
 
 let obtenerStorage = localStorage.getItem("carrito")

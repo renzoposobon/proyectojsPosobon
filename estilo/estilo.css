@@ -8,6 +8,7 @@
 
 body {
  font-family: "Roboto", sans-serif;
+ background-color:antiquewhite;
 }
 
 /****DESKTOP****/
@@ -74,7 +75,7 @@ ul li a {
     align-content: space-between;
 }
 
-h2 {
+.texto h2 {
     font-size: 35px;
     margin: 20px;
     background-color: rgb(219, 203, 203);
@@ -93,6 +94,96 @@ p {
     display: flex;
     justify-content: center;
     flex-direction: row;
+}
+
+.tituloAdoptar {
+    font-size: 40px;
+    text-align: center;
+    background-color: rgb(219, 203, 203);
+    display: flex;
+    align-items: center;
+    margin: 0 200px;
+}
+
+h4 {
+    font-size: 35px;
+    margin: 15px;
+    background-color: rgb(219, 203, 203);
+    max-width: 550px;
+    text-align: center;
+}
+
+b {
+    font-size: 20px;
+}
+
+p {
+    text-align: center;
+    font-size: 23px;
+    margin: 20px 40px;
+    max-width: 500px;
+}
+
+#cartasMascotas {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#cartasMascotas div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px black solid;
+    box-sizing: border-box;
+    margin: 40px;
+    width: 220px;
+}
+
+#cartasMascotas div img {
+    width: 300px;
+    height: 300px;
+    width: 100%;
+}
+
+#botonAdoptar1,
+#botonAdoptar2,
+#botonAdoptar3,
+#botonAdoptar4,
+#botonAdoptar5,
+#botonAdoptar6,
+#botonAdoptar7 {
+    font-size: 20px;
+    text-align: center;
+    border: 0.25px solid black;
+    width: 100%;
+}
+
+#botonAdoptar1:hover,
+#botonAdoptar2:hover,
+#botonAdoptar3:hover,
+#botonAdoptar4:hover,
+#botonAdoptar5:hover,
+#botonAdoptar6:hover,
+#botonAdoptar7:hover {
+    font-size: 20px;
+    text-align: center;
+    background-color: rgba(43, 141, 187, 0.76);
+    color: #fff;
+    border: 0.25px solid black;
+    width: 100%;
+}
+
+h3 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.textoDonar {
+    width: 100%;
+    background-color: #abe9cd;
 }
 
 }
