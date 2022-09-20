@@ -15,19 +15,21 @@ body {
 @media (min-width: 1024px){
 
 #cabeza {
-    background-image: linear-gradient(to right, #3eadcf, #abe9cd)
+    background-image: linear-gradient(to right, #3eadcf, #abe9cd);
+    height: 60px;
 }
 
 ul {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    height: 100%;
 }
 
 ul li {
     font-size: 25px;
     list-style-type: none;
-    margin: 0.7em;
+    margin: 0.2em 0.7em 0 0.7em;
     padding: 0.5rem;
 }
 
@@ -96,13 +98,13 @@ p {
     flex-direction: row;
 }
 
-.tituloAdoptar {
+.titulos {
     font-size: 40px;
     text-align: center;
     background-color: rgb(219, 203, 203);
     display: flex;
     align-items: center;
-    margin: 0 200px;
+    margin: 100px 200px;
 }
 
 h4 {
@@ -181,9 +183,35 @@ h3 {
     text-align: center;
 }
 
-.textoDonar {
+#cartasObjetos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#cartasObjetos div {
+    width: 198px;
+    border: 1px solid black;
+    margin: 20px 40px;
+    /* height: 485px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between; */
+}
+
+#cartasObjetos div img {
     width: 100%;
-    background-color: #abe9cd;
+}
+
+#cartasObjetos div .unidad {
+    text-align: center;
+    font-size: 15px;
+    margin: 20px 40px;
+}
+
+#cartasObjetos div button {
+    width: 100%;
 }
 
 }
