@@ -24,7 +24,8 @@ for (const j of objetoDonacion){
                                         <h4>${j.nombre}</h4>
                                         <p>$${j.precio}</p>
                                         <p class="unidad">Unidad: ${j.unidad}</p>
-                                        <button onclick='clickDonar(${j.id})' id="botonDonar${j.id}">Agregar</button>
+                                        <button onclick='restarCarrito(${j.id})' id="botonDonarA${j.id}">-</button>
+                                        <button onclick='sumarCarrito(${j.id})' id="botonDonarB${j.id}">+</button>
         `;
         donacion.append(cartaObjetosDonacion);
     } else if (j.id === 99){
@@ -39,15 +40,30 @@ for (const j of objetoDonacion){
 
 let arrObjeto = []
 
-function clickDonar(id) {
-    const objeto = objetoDonacion.find((y) => y.id === id);
-    alert(`Gracias por donar a nuestros refugios de animales!`);
-    arrObjeto.push(objeto)
-    localStorage.setItem("Donacion", JSON.stringify(arrObjeto));
-};
+// function clickDonar(id) {
+//     const objeto = objetoDonacion.find((y) => y.id === id);
+//     alert(`Gracias por donar a nuestros refugios de animales!`);
+//     arrObjeto.push(objeto)
+//     localStorage.setItem("Donacion", JSON.stringify(arrObjeto));
+// };
 
-let clickBotonDonar = document.getElementsByTagName("botonDonar[objetoDonacion.id]");
-clickBotonDonar.addEventListener("click", clickDonar);
+function sumarCarrito(id) {
+    let sumado = objetoDonacion.find((z) => z.id === id);
+    arrObjeto.push(sumado);
+    localStorage.setItem("Donacion", JSON.stringify(arrObjeto));
+}
+
+function restarCarrito(id) {
+    let restado = objetoDonacion.find((w) => w.id === id);
+    arrObjeto.pop();
+    localStorage.removeItem(restado)
+}
+
+let clickBotonDonarB = document.getElementsByTagName("botonDonarB[objetoDonacion.id]");
+clickBotonDonarB.addEventListener("click", sumarCarrito);
+
+let clickBotonDonarA = document.getElementsByTagName("botonDonarA[objetoDonacion.id]");
+clickBotonDonarA.addEventListener("click", restarCarrito);
 
 
 

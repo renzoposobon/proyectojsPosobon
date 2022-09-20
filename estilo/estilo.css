@@ -12,7 +12,7 @@ body {
 }
 
 /****DESKTOP****/
-@media (min-width: 1024px){
+/* @media (min-width: 1024px){ */
 
 #cabeza {
     background-image: linear-gradient(to right, #3eadcf, #abe9cd);
@@ -102,8 +102,6 @@ p {
     font-size: 40px;
     text-align: center;
     background-color: rgb(219, 203, 203);
-    display: flex;
-    align-items: center;
     margin: 100px 200px;
 }
 
@@ -211,13 +209,14 @@ h3 {
 }
 
 #cartasObjetos div button {
-    width: 100%;
+    width: 30%;
+    margin: 8px 17px;
 }
 
-}
+/* } */
 
 /****TABLET****/
-@media (min-width: 481px) and (max-width: 1023px) {
+/* @media (min-width: 481px) and (max-width: 1023px) {
     #cabeza {
         background-image: linear-gradient(to right, #3eadcf, #abe9cd)
     }
@@ -236,7 +235,7 @@ h3 {
     } 
 }
 
-/****SMARTPHONE****/
+/****SMARTPHONE****
 @media (max-width: 480px) {
     #cabeza {
         background-image: linear-gradient(to right, #3eadcf, #abe9cd)
@@ -255,4 +254,4 @@ h3 {
         padding: 0.3rem;
     } 
 }
-
+ */
