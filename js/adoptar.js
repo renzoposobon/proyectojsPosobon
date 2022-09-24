@@ -15,6 +15,21 @@ let mascotasEnAdopcion = [
 
 let divPerros = document.getElementById("cartasMascotas");
 
+// for (const i of mascotasEnAdopcion) {
+//     let cartaPerro = document.createElement("div");
+//     cartaPerro.className = ("card")
+//     cartaPerro.innerHTML = `
+//     <img src="./imagenes/${i.nombre}.jpeg" class="card-img-top" alt="...">
+//     <div class="card-body">
+//       <h5 class="card-title">${i.nombre}</h5>
+//       <p class="card-text">${i.edad}</p>
+//       <a href="#" class="btn btn-primary">Go somewhere</a>
+//     </div>
+
+//     `;
+//     divPerros.append(cartaPerro);
+// };
+
 for (const i of mascotasEnAdopcion) {
     let cartaPerro = document.createElement("div");
     cartaPerro.innerHTML = `<img src="./imagenes/${i.nombre}.jpeg"></img>
@@ -29,8 +44,41 @@ for (const i of mascotasEnAdopcion) {
 
 function clickAdoptar(id) {
     const mascota = mascotasEnAdopcion.find((x) => x.id === id)
-    alert(`Gracias por adoptar a ${mascota.nombre}!`);
     localStorage.setItem("Adopcion", JSON.stringify(mascota));
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+          confirmButton: 'btn btn-success',
+          cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+      })
+      
+      swalWithBootstrapButtons.fire({
+        title: `¿Está seguro que desea adoptar a ${mascota.nombre}?`,
+        // text: "You won't be able to revert this!",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonText: 'Si, deseo adoptar!',
+        cancelButtonText: 'Cancelar',
+        reverseButtons: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+          swalWithBootstrapButtons.fire(
+            'Usted ha adoptado una mascota ❤',
+            '¡Un refugio de animales se contactará con usted!',
+            'success'
+          )
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          swalWithBootstrapButtons.fire(
+            'Adopción cancelada',
+            // 'Your imaginary file is safe :)',
+            // 'error'
+          )
+        }
+      })
 };
 
 let clickBotonAdoptar = document.getElementsByTagName("botonAdoptar[perros.id]");

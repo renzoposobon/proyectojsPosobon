@@ -176,6 +176,15 @@ p {
     width: 100%;
 }
 
+.swal2-confirm {
+    margin: 10px !important;
+}
+
+.swal2-cancel {
+    margin: 10px !important;
+}
+
+
 h3 {
     font-size: 30px;
     text-align: center;

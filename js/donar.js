@@ -17,7 +17,7 @@ let objetoDonacion = [
 let donacion = document.getElementById("cartasObjetos");
 
 for (const j of objetoDonacion){
-    let cartaObjetosDonacion = document.createElement("div")
+    let cartaObjetosDonacion = document.createElement("div");
     if (j.id !== 99){
         cartaObjetosDonacion.innerHTML = `
                                         <img src="./imagenes/${j.src}.jpg"></img>
@@ -51,11 +51,28 @@ function sumarCarrito(id) {
     let sumado = objetoDonacion.find((z) => z.id === id);
     arrObjeto.push(sumado);
     localStorage.setItem("Donacion", JSON.stringify(arrObjeto));
+    const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })
+      
+      Toast.fire({
+        icon: 'success',
+        title: 'Producto agregado'
+      })
 }
 
 function restarCarrito(id) {
     let restado = objetoDonacion.find((w) => w.id === id);
-    arrObjeto.pop();
+    indice = 
+    arrObjeto.splice(indice, 0);
     localStorage.removeItem(restado)
 }
 
