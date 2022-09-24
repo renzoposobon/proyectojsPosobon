@@ -69,18 +69,18 @@ function sumarCarrito(id) {
       })
 }
 
-function restarCarrito(id) {
-    let restado = objetoDonacion.find((w) => w.id === id);
-    indice = 
-    arrObjeto.splice(indice, 0);
-    localStorage.removeItem(restado)
-}
+// function restarCarrito(id) {
+//     let restado = objetoDonacion.find((w) => w.id === id);
+//     indice = 
+//     arrObjeto.splice(indice, 0);
+//     localStorage.removeItem(restado)
+// }
 
 let clickBotonDonarB = document.getElementsByTagName("botonDonarB[objetoDonacion.id]");
 clickBotonDonarB.addEventListener("click", sumarCarrito);
 
-let clickBotonDonarA = document.getElementsByTagName("botonDonarA[objetoDonacion.id]");
-clickBotonDonarA.addEventListener("click", restarCarrito);
+// let clickBotonDonarA = document.getElementsByTagName("botonDonarA[objetoDonacion.id]");
+// clickBotonDonarA.addEventListener("click", restarCarrito);
 
 
 

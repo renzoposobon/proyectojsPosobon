@@ -9,10 +9,6 @@ let mascotasEnAdopcion = [
     {id: 7, nombre: "Felisa", edad: "1 año y medio", ciudad: "Ciudad" }
 ];
 
-// let gatos = [
-
-// ];
-
 let divPerros = document.getElementById("cartasMascotas");
 
 // for (const i of mascotasEnAdopcion) {
@@ -30,6 +26,11 @@ let divPerros = document.getElementById("cartasMascotas");
 //     divPerros.append(cartaPerro);
 // };
 
+let sumGC = 0;
+let sumLH = 0;
+let sumG = 0;
+let sumCM = 0;
+
 for (const i of mascotasEnAdopcion) {
     let cartaPerro = document.createElement("div");
     cartaPerro.innerHTML = `<img src="./imagenes/${i.nombre}.jpeg"></img>
@@ -40,7 +41,33 @@ for (const i of mascotasEnAdopcion) {
 
     `;
     divPerros.append(cartaPerro);
+    i.ciudad === "Godoy Cruz" ? sumGC++ : i.ciudad === "Ciudad" ? sumCM++ : i.ciudad === "Las Heras" ? sumLH++ : i.ciudad === "Guaymallen" ? sumG++ : 0
 };
+
+let secSumador = document.createElement("seccion");
+secSumador.className = ("seccionMascotas")
+secSumador.innerHTML = `    <label>Mascotas en Godoy Cruz: ${sumGC}
+                            <label>Mascotas en Guaymallén: ${sumG}
+                            <label>Mascotas en Ciudad: ${sumCM}
+                            <label>Mascotas en Las Heras: ${sumLH}
+`
+divPerros.append(secSumador);
+
+let mascotasZonaCentro = [];
+mascotasZonaCentro.push(sumCM);
+mascotasZonaCentro.push(sumGC);
+
+
+let mascotasZonaRural = [];
+mascotasZonaRural.push(sumG);
+mascotasZonaRural.push(sumLH);
+
+let mascotasZonasTotal = [...mascotasZonaCentro, ...mascotasZonaRural];
+let numMascotas = mascotasZonasTotal.reduce((acc, el) => acc + el);
+
+let textoCantidad = document.getElementById("cantidadMascotas");
+textoCantidad.innerText = `Cantidad de mascotas a adoptar: ${numMascotas}`;
+
 
 function clickAdoptar(id) {
     const mascota = mascotasEnAdopcion.find((x) => x.id === id)
