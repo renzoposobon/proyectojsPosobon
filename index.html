@@ -15,20 +15,33 @@
     <link rel="stylesheet" href="./bootstrap-5.2.1-dist/css/bootstrap.css">
 </head>
 <body id="cuerpo">
+    <!-- HEADER -->
     <header id="cabeza">
         <ul>
             <li class="listaEncabezado"><a href="#inicio">Inicio</a></li>
-            <li class="listaEncabezado"><a href="#sbremm">Sobre Mundo Mascotas</a></li>
+            <li class="listaEncabezado"><a href="#sobremm">Sobre Mundo Mascotas</a></li>
             <li class="listaEncabezado"><a href="#adoptar">Adoptar</a></li>
             <li class="listaEncabezado"><a href="#donar">Donar</a></li>
             <li class="listaEncabezado"><a href="#servicioPaseo">Servicio de paseo</a></li>
         </ul>
     </header>
+    <!-- ÍCONO DE SUBIR -->
+    <div class="subir" id="subir">
+      <ul>
+        <li>
+          <a href="#cabeza">
+            <img src="./imagenes/arrow-up-circle-fill.svg" alt="" class="iconoSubir">  
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- SECCIÓN INICIO-->
     <div id="inicio">
         <h1>BIENVENIDO A MUNDO MASCOTAS</h1>
         <img src="./imagenes/pets-3715733_1280.jpg" alt="">
     </div>
     <hr>
+    <!-- SECCIÓN SOBRE MUNDO MASCOTAS-->
     <div id="sobremm">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-indicators">
@@ -70,6 +83,7 @@
         </div>
     </div>
     <hr><hr><hr><hr>
+    <!-- SECCIÓN ADOPTAR -->
     <div id="adoptar">
       <div>
           <h2 class="titulos">EN ESTA SECCIÓN PODES ELEGIR LA MASCOTA QUE QUIERAS ADOPTAR CON MUCHO AMOR</h2>
@@ -81,6 +95,7 @@
 
       </div>
     </div>
+    <!-- SECCIÓN DONAR -->
     <div id="donar">
       <div>
         <h2 class="titulos">¡TAMBIEN PODES DONAR A NUESTROS REFUGIOS DE ANIMALES!</h2>
@@ -97,7 +112,8 @@
     <!-- <section id="botonDonar">
         <input type='submit' value='Donar'></input>    
     </section> -->
-    <div id="servicioPaseo">
+    <!-- SECCIÓN SERVICIO DE PASEO -->
+    <div id="servicioPaseo" class="paseo">
         <h2 class="titulos">SERVICIO DE PASEO DE PERROS 🐶</h2>
         <form action="" id="">
             <label for="">SELECCIONE DEPARTAMENTO</label>
@@ -121,7 +137,7 @@
                 <option value="">Malargue</option>
                 <option value="">San Carlos</option>
             </select>
-            <input type="submit" value="Contactar" id="botonContactarPaseo">
+            <!-- <input type="submit" value="Contactar" id="botonContactarPaseo"> -->
         </form>
     </div>
     <footer id="pie">

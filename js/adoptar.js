@@ -31,47 +31,97 @@ let sumLH = 0;
 let sumG = 0;
 let sumCM = 0;
 
-for (const i of mascotasEnAdopcion) {
+fetch("./data.json")
+.then(response => response.json())
+.then(data => {
+  data.forEach(i => {
     let cartaPerro = document.createElement("div");
     cartaPerro.innerHTML = `<img src="./imagenes/${i.nombre}.jpeg"></img>
                             <h4>${i.nombre}</h4>
                             <b>${i.edad}</b>
                             <p>${i.ciudad}</p>
                             <button onclick='clickAdoptar(${i.id})' id="botonAdoptar${i.id}">Adoptar</button>
-
     `;
     divPerros.append(cartaPerro);
-    i.ciudad === "Godoy Cruz" ? sumGC++ : i.ciudad === "Ciudad" ? sumCM++ : i.ciudad === "Las Heras" ? sumLH++ : i.ciudad === "Guaymallen" ? sumG++ : 0
-};
+  });
+})
 
-let secSumador = document.createElement("seccion");
-secSumador.className = ("seccionMascotas")
-secSumador.innerHTML = `    <label>Mascotas en Godoy Cruz: ${sumGC}
-                            <label>Mascotas en Guaymallén: ${sumG}
-                            <label>Mascotas en Ciudad: ${sumCM}
-                            <label>Mascotas en Las Heras: ${sumLH}
-`
-divPerros.append(secSumador);
+// const traerDatos = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(mascotasEnAdopcion);
+//     }, 3000);
+//   });
+// };
 
-let mascotasZonaCentro = [];
-mascotasZonaCentro.push(sumCM);
-mascotasZonaCentro.push(sumGC);
+// traerDatos()
+// .then(response => {
+//   response.forEach(i => {
+//     let cartaPerro = document.createElement("div");
+//     cartaPerro.innerHTML = `<img src="./imagenes/${i.nombre}.jpeg"></img>
+//                                 <h4>${i.nombre}</h4>
+//                                 <b>${i.edad}</b>
+//                                  <p>${i.ciudad}</p>
+//                                  <button onclick='clickAdoptar(${i.id})' id="botonAdoptar${i.id}">Adoptar</button>
+    
+//          `;
+
+//          divPerros.append(cartaPerro);
+//   });
+// })
+// .catch(error => console.log(error));
+
+// for (const i of mascotasEnAdopcion) {
+//     let cartaPerro = document.createElement("div");
+//     cartaPerro.innerHTML = `<img src="./imagenes/${i.nombre}.jpeg"></img>
+//                             <h4>${i.nombre}</h4>
+//                             <b>${i.edad}</b>
+//                             <p>${i.ciudad}</p>
+//                             <button onclick='clickAdoptar(${i.id})' id="botonAdoptar${i.id}">Adoptar</button>
+
+//     `;
+//     divPerros.append(cartaPerro);
+//     i.ciudad === "Godoy Cruz" ? sumGC++ : i.ciudad === "Ciudad" ? sumCM++ : i.ciudad === "Las Heras" ? sumLH++ : i.ciudad === "Guaymallen" ? sumG++ : 0
+// };
+
+// let secSumador = document.createElement("seccion");
+// secSumador.className = ("seccionMascotas")
+// secSumador.innerHTML = `    <label>Mascotas en Godoy Cruz: ${sumGC}
+//                             <label>Mascotas en Guaymallén: ${sumG}
+//                             <label>Mascotas en Ciudad: ${sumCM}
+//                             <label>Mascotas en Las Heras: ${sumLH}
+// `
+// divPerros.append(secSumador);
+
+// let mascotasZonaCentro = [];
+// mascotasZonaCentro.push(sumCM);
+// mascotasZonaCentro.push(sumGC);
 
 
-let mascotasZonaRural = [];
-mascotasZonaRural.push(sumG);
-mascotasZonaRural.push(sumLH);
+// let mascotasZonaRural = [];
+// mascotasZonaRural.push(sumG);
+// mascotasZonaRural.push(sumLH);
 
-let mascotasZonasTotal = [...mascotasZonaCentro, ...mascotasZonaRural];
-let numMascotas = mascotasZonasTotal.reduce((acc, el) => acc + el);
+// let mascotasZonasTotal = [...mascotasZonaCentro, ...mascotasZonaRural];
+// let numMascotas = mascotasZonasTotal.reduce((acc, el) => acc + el);
 
-let textoCantidad = document.getElementById("cantidadMascotas");
-textoCantidad.innerText = `Cantidad de mascotas a adoptar: ${numMascotas}`;
+// let textoCantidad = document.getElementById("cantidadMascotas");
+// textoCantidad.innerText = `Cantidad de mascotas a adoptar: ${numMascotas}`;
 
 
-function clickAdoptar(id) {
+const clickAdoptar = async (id) => {
     const mascota = mascotasEnAdopcion.find((x) => x.id === id)
     localStorage.setItem("Adopcion", JSON.stringify(mascota));
+    const { value: email } = await Swal.fire({
+      title: 'Ingrese su email',
+      input: 'email',
+      // inputLabel: 'Your email address',
+      inputPlaceholder: '@gmail.com'
+    })
+    
+    if (email) {
+      Swal.fire(`Entered email: ${email}`)
+    }
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
           confirmButton: 'btn btn-success',

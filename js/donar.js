@@ -70,9 +70,9 @@ function sumarCarrito(id) {
 }
 
 // function restarCarrito(id) {
-//     let restado = objetoDonacion.find((w) => w.id === id);
-//     indice = 
-//     arrObjeto.splice(indice, 0);
+//     let restado = arrObjeto.find((w) => w.id === id);
+//     indice = arrObjeto.indexOf(restado)
+//     arrObjeto.splice(indice, 1);
 //     localStorage.removeItem(restado)
 // }
 
