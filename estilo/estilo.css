@@ -317,6 +317,14 @@ h3 {
     margin: 1% 2% 2% 2%;
 }
 
+.cartaPaseadores img {
+    min-height: 200px;
+}
+
+.cartaPaseadores:hover {
+    opacity: 1 !important;
+}
+
 .cartaSinPaseadores {
     margin: 2%;
 }
