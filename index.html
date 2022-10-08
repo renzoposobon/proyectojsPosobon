@@ -79,7 +79,12 @@
           </div>
         <div class="texto" id="texto">
             <h2>SOBRE MUNDO MASCOTAS 💜</h2>
-            <p id="textoSobreMM">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit nulla tempore odio enim consectetur, delectus animi placeat repudiandae eveniet fugit ipsam dicta in officiis cumque! Sapiente, natus. Vero quia saepe dicta? Perferendis voluptas explicabo alias incidunt facilis dicta perspiciatis tempora? Ex dicta quis nisi culpa expedita voluptatum delectus? Provident, voluptatibus!</p>
+            <p>
+              Mundo Mascotas nace como una iniciativa para conectar a personas que den en adopción a mascotas y a personas que deseen adoptarlas.
+            </p>
+            <p>
+              A su vez, para aquellos que quieran colaborar pero no pueden adoptar una mascota, tienen la opción de donar productos de primera necesidad para perros y gatos que se encuentran alojados en refugios de animales en Mendoza.
+            </p>
         </div>
     </div>
     <hr><hr><hr><hr>
@@ -103,50 +108,67 @@
       <div id="cartasObjetos">
 
       </div>
-      <div class="carrito">
-        <h3>
-          Su carrito:
-        </h3>
+      <div id="carrito" class="carrito">
+        <h4>Su carrito:</h4>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Id</th>
+              <th scope="col">Producto</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Acción</th>
+              <th scope="col">Total</th>
+            </tr>
+          </thead>
+          <tbody id="items"></tbody>
+          <tfoot>
+            <tr id="footer-carrito" class="footer-carrito">
+              <th scope="row" colspan="5">Carro vacío</th>
+            </tr>
+          </tfoot>
+        </table>
       </div>
     </div>
-    <!-- <section id="botonDonar">
-        <input type='submit' value='Donar'></input>    
-    </section> -->
     <!-- SECCIÓN SERVICIO DE PASEO -->
     <div id="servicioPaseo" class="paseo">
         <h2 class="titulos">SERVICIO DE PASEO DE PERROS 🐶</h2>
         <form action="" id="">
             <label for="">SELECCIONE DEPARTAMENTO</label>
-            <select name="transporte">
-                <option>Ciudad de Mendoza</option>
-                <option>Godoy Cruz</option>
-                <option>Guaymallen</option>
-                <option value="">Maipu</option>
-                <option value="">Lujan</option>
-                <option value="">Las Heras</option>
-                <option value="">San Martin</option>
-                <option value="">San Rafael</option>
-                <option value="">Junin</option>
-                <option value="">Rivadavia</option>
-                <option value="">Lavalle</option>
-                <option value="">La Paz</option>
-                <option value="">Santa Rosa</option>
-                <option value="">Tunuyan</option>
-                <option value="">Tupungato</option>
-                <option value="">General Alvear</option>
-                <option value="">Malargue</option>
-                <option value="">San Carlos</option>
+            <select name="departamentos" id="dptos">
+                <option id="ciudad" selected>Ciudad de Mendoza</option>
+                <option id="godoyCruz">Godoy Cruz</option>
+                <option id="guaymallen" >Guaymallen</option>
+                <option id="maipu">Maipu</option>
+                <option id="lujan">Lujan</option>
+                <option id="lasHeras">Las Heras</option>
+                <option id="sanMartin">San Martin</option>
+                <option id="sanRafael">San Rafael</option>
+                <option id="junin">Junin</option>
+                <option id="rivadavia">Rivadavia</option>
+                <option id="lavalle">Lavalle</option>
+                <option id="laPaz">La Paz</option>
+                <option id="santaRosa">Santa Rosa</option>
+                <option id="tunuyan">Tunuyan</option>
+                <option id="tupungato" disabled>Tupungato</option>
+                <option id="generalAlvear">General Alvear</option>
+                <option id="malargue">Malargue</option>
+                <option id="sanCarlos">San Carlos</option>
             </select>
-            <!-- <input type="submit" value="Contactar" id="botonContactarPaseo"> -->
         </form>
+        <section id="paseadores">
+        </section>
     </div>
     <footer id="pie">
-
+      <address>
+        <!--COPYRIGHT-->
+        &copy; Desarrollado por Renzo Posobon
+      </address>
     </footer>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script> -->
     <script src="./js/adoptar.js"></script>
-    <!-- <script src="./js/donar.js"></script> -->
+    <script src="./js/donar.js"></script>
+    <script src="./js/paseo.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
 </body>

@@ -16,23 +16,45 @@ let objetoDonacion = [
 
 let donacion = document.getElementById("cartasObjetos");
 
+const donarSinDestino = () => {
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: '¡Gracias por donar a nuestros refugios de animales!',
+    showConfirmButton: false,
+    timer: 3000
+  })
+}
+
 for (const j of objetoDonacion){
     let cartaObjetosDonacion = document.createElement("div");
     if (j.id !== 99){
-        cartaObjetosDonacion.innerHTML = `
-                                        <img src="./imagenes/${j.src}.jpg"></img>
-                                        <h4>${j.nombre}</h4>
-                                        <p>$${j.precio}</p>
-                                        <p class="unidad">Unidad: ${j.unidad}</p>
-                                        <button onclick='restarCarrito(${j.id})' id="botonDonarA${j.id}">-</button>
-                                        <button onclick='sumarCarrito(${j.id})' id="botonDonarB${j.id}">+</button>
-        `;
+      cartaObjetosDonacion.innerHTML = `
+      <div class="card">
+        <img src="./imagenes/${j.src}.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">${j.nombre}</h5>
+          <p class="card-text">$${j.precio}</p>
+          <p class="unidad">Unidad: ${j.unidad}</p>
+          <button onclick='clickDonar(${j.id})' id="botonDonar${j.id}" class="btn btn-primary">Agregar</button>
+        </div>
+      </div>
+      `;
         donacion.append(cartaObjetosDonacion);
     } else if (j.id === 99){
-        cartaObjetosDonacion.innerHTML = `
+        cartaObjetosDonacion.innerHTML = `<section id="donacionSinDestino">
                                             <label>DONACIÓN SIN DESTINO</label>
                                             <input type="number" placeholder="INGRESE MONTO">
-                                            <input type="submit" id="donacionSinDestino" onclick="clickDonar(${j.id})">
+                                            <input type="submit" id="donacionSinDestino" onclick="donarSinDestino(${j.id})" class="btn btn-primary">
+                                            <div class="alert alert-primary d-flex align-items-center" role="alert">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                                                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                              </svg>
+                                              <div>
+                                                El refugio de animales determinará el destino de su donación.
+                                              </div>
+                                            </div>
+                                          </section>
         `;
         donacion.append(cartaObjetosDonacion)
     }
@@ -40,16 +62,9 @@ for (const j of objetoDonacion){
 
 let arrObjeto = []
 
-// function clickDonar(id) {
-//     const objeto = objetoDonacion.find((y) => y.id === id);
-//     alert(`Gracias por donar a nuestros refugios de animales!`);
-//     arrObjeto.push(objeto)
-//     localStorage.setItem("Donacion", JSON.stringify(arrObjeto));
-// };
-
-function sumarCarrito(id) {
-    let sumado = objetoDonacion.find((z) => z.id === id);
-    arrObjeto.push(sumado);
+function clickDonar(id) {
+    const objeto = objetoDonacion.find((y) => y.id === id);
+    arrObjeto.push(objeto)
     localStorage.setItem("Donacion", JSON.stringify(arrObjeto));
     const Toast = Swal.mixin({
         toast: true,
@@ -61,135 +76,17 @@ function sumarCarrito(id) {
           toast.addEventListener('mouseenter', Swal.stopTimer)
           toast.addEventListener('mouseleave', Swal.resumeTimer)
         }
-      })
-      
+      })  
       Toast.fire({
         icon: 'success',
         title: 'Producto agregado'
       })
-}
+};
 
-// function restarCarrito(id) {
-//     let restado = arrObjeto.find((w) => w.id === id);
-//     indice = arrObjeto.indexOf(restado)
-//     arrObjeto.splice(indice, 1);
-//     localStorage.removeItem(restado)
-// }
-
-let clickBotonDonarB = document.getElementsByTagName("botonDonarB[objetoDonacion.id]");
-clickBotonDonarB.addEventListener("click", sumarCarrito);
-
-// let clickBotonDonarA = document.getElementsByTagName("botonDonarA[objetoDonacion.id]");
-// clickBotonDonarA.addEventListener("click", restarCarrito);
+let clickBotonDonar = document.getElementsByTagName("botonDonar[objetoDonacion.id]");
+clickBotonDonar.addEventListener("onclick", clickDonar);
 
 
+let DonarSinDestino = document.getElementsByTagName("donacionSinDestino[objetoDonacion.id]");
+DonarSinDestino.addEventListener("onclick", donarSinDestino);
 
-// for (const j of objetoDonacion){
-//     let cartaObjetosDonacion = document.createElement("div")
-//     cartaObjetosDonacion.innerHTML = `
-//                                     <img src="./imagenes/${j.src}.jpg"></img>
-//                                     <h4>${j.nombre}</h4>
-//                                     <p>$${j.precio}</p>
-//                                     <p class="unidad">Unidad: ${j.unidad}</p>
-//                                     <button onclick='clickDonar(${j.id})' id="botonDonar${j.id}">Agregar</button>
-//     `;
-//     donacion.append(cartaObjetosDonacion);
-// }
-
-
-// let ingreso
-// let costo;
-// let producto;
-// let codigoDescuento = 589125;
-
-// class Personas {
-//     constructor(producto, costo){
-//         this.producto = producto,
-//         this.costo = costo
-//     }
-// }
-
-// var arr = []
-
-// for (let i = 0; i < 3; i++) {
-//     let ingreso = prompt(`Ingresar producto al carrito \n1- Combo perro \n2- Combo gato \n3-Combo mixto`);
-//     if (ingreso == 1){
-//         costo = 10;
-//         producto = "Combo perro";
-//         descuento()
-//     } else if (ingreso == 2){
-//         costo = 8;
-//         producto = "Combo gato";
-//         descuento()
-//     } else if (ingreso == 3){
-//         producto = "Combo mixto";
-//         costo = 15;
-//         descuento()
-//     } else {
-//         alert("Opcion incorrecta")
-//     }
-//     var objeto1 = new Personas(producto, costo)
-//     arr.push(objeto1)
-//     alert(`Su ${objeto1.producto} cuesta ${objeto1.costo}`)
-// }
-
-
-// for (let i = 0; i < arr.length; i++){
-//     alert(`OBJETO ${i+1} \nPRODUCTO ${arr[i].producto} \nPRECIO ${arr[i].costo}`)
-// }
-
-// function descuento(){
-//     let descuento = prompt("Posee algun descuento?")
-//     if (descuento == 'si' || (descuento) == "SI" || (descuento) == "Si"){
-//         let ingresoDescuento = parseInt(prompt("Ingrese codigo"))
-//         if (ingresoDescuento == codigoDescuento){
-//             alert("Su codigo ha sido aceptado!")
-//             costo = costo - 2
-//             // alert(`El ${producto} cuesta $${costo}`)
-//         } else {
-//             alert('codigo invalido')
-//         }
-//     } else if (descuento == 'no' || descuento == "NO" || descuento == "No"){
-//         // alert(`El ${producto} cuesta $${costo}`)
-//     }
-//     else {
-//         alert("Opcion incorrecta")
-//     }
-// }
-
-// let precioTotal = arr.reduce((acc, e) => acc + e.costo, 0)
-// alert(`El precio final es de su compra es de $${precioTotal}`)
-
-// // DOM
-// let donar = document.getElementById("donar")
-// for (const i of arr) {
-//     let contenedor = document.createElement("div")
-//     contenedor.innerHTML = `<h3>${i.producto}</h3>
-//                             <p class="textoDonar">${i.costo}</p>`
-//     donar.append(contenedor)
-// }
-
-// let mensajePrecioTotal = document.createElement("h3")
-// mensajePrecioTotal.innerText = `El costo total es de ${precioTotal}`
-// donar.append(mensajePrecioTotal)
-
-// // EVENTO SECCION DONAR
-// let botonDonar = document.getElementById("botonDonar")
-// botonDonar.addEventListener("click", clickDonar)
-// function clickDonar(){
-//     alert("Gracias por donar!");
-// }
-
-// // EVENTO SECCION SERVICIO DE PASEO DE PERROS
-// let botonPaseo = document.getElementById("botonContactarPaseo")
-// botonPaseo.addEventListener("click", clickPaseo)
-// function clickPaseo (i) {
-//     i.preventDefault()
-//     alert("Gracias por elegir nuestro servicio de paseo")
-// }
-
-// // STORAGE
-// localStorage.setItem("carrito", JSON.stringify(arr))
-
-// let obtenerStorage = localStorage.getItem("carrito")
-// console.log(JSON.parse(obtenerStorage));

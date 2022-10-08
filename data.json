@@ -2,7 +2,7 @@
     {"id": 1, "nombre": "Rocco", "edad": "10 años", "ciudad": "Godoy Cruz"},
     {"id": 2, "nombre": "Luna", "edad": "7 años", "ciudad": "Godoy Cruz"},
     {"id": 3, "nombre": "Simur", "edad": "11 años", "ciudad": "Guaymallen"},
-    {"id": 4, "nombre": "Pelu", "edad": "45 días", "ciudad": "Las Heras"},
+    {"id": 4, "nombre": "Pelu", "edad": "5 años", "ciudad": "Las Heras"},
     {"id": 5, "nombre": "Milaneso", "edad": "6 años", "ciudad": "Las Heras" },
     {"id": 6, "nombre": "Memonia", "edad": "2 años", "ciudad": "Las Heras" },
     {"id": 7, "nombre": "Felisa", "edad": "1 año y medio", "ciudad": "Ciudad" }

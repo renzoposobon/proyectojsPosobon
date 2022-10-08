@@ -9,7 +9,7 @@
 
 body {
  font-family: "Roboto", sans-serif;
- background-color:antiquewhite;
+ background-color:rgba(196, 116, 160, 0.534);
 }
 
 /****DESKTOP****/
@@ -95,7 +95,7 @@ ul li a {
     width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     align-content: space-between;
 }
@@ -104,8 +104,6 @@ ul li a {
     font-size: 35px;
     margin: 20px;
     background-color: rgb(219, 203, 203);
-    max-width: 550px;
-    text-align: center;
 }
 
 p {
@@ -113,6 +111,12 @@ p {
     font-size: 23px;
     margin: 20px 40px;
     max-width: 500px;
+}
+
+.titulos {
+    font-size: 40px;
+    text-align: center;
+    margin: 100px 200px;
 }
 
 /* SECCIÓN SOBRE MUNDO MASCOTAS */
@@ -122,24 +126,7 @@ p {
     flex-direction: row;
 }
 
-.titulos {
-    font-size: 40px;
-    text-align: center;
-    background-color: rgb(219, 203, 203);
-    margin: 100px 200px;
-}
 
-h4 {
-    font-size: 35px;
-    margin: 15px;
-    background-color: rgb(219, 203, 203);
-    max-width: 550px;
-    text-align: center;
-}
-
-b {
-    font-size: 20px;
-}
 
 p {
     text-align: center;
@@ -149,19 +136,21 @@ p {
 }
 
 /* SECCIÓN ADOPTAR */
+
 #adoptar div .titulos {
     margin: 100px 200px 50px 200px;
 }
 
 #cantidadMascotas {
-    margin: 0% 30% 0% 30%;
+    margin: 4% 30%;
 }
 
 #cartasMascotas {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
+    margin: 1%;
 }
 
 #cartasMascotas div {
@@ -169,44 +158,9 @@ p {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 1px black solid;
     box-sizing: border-box;
-    margin: 40px;
+    margin: 10px 20px;
     width: 220px;
-}
-
-#cartasMascotas div img {
-    width: 300px;
-    height: 300px;
-    width: 100%;
-}
-
-#botonAdoptar1,
-#botonAdoptar2,
-#botonAdoptar3,
-#botonAdoptar4,
-#botonAdoptar5,
-#botonAdoptar6,
-#botonAdoptar7 {
-    font-size: 20px;
-    text-align: center;
-    border: 0.25px solid black;
-    width: 100%;
-}
-
-#botonAdoptar1:hover,
-#botonAdoptar2:hover,
-#botonAdoptar3:hover,
-#botonAdoptar4:hover,
-#botonAdoptar5:hover,
-#botonAdoptar6:hover,
-#botonAdoptar7:hover {
-    font-size: 20px;
-    text-align: center;
-    background-color: rgba(43, 141, 187, 0.76);
-    color: #fff;
-    border: 0.25px solid black;
-    width: 100%;
 }
 
 .swal2-confirm {
@@ -259,28 +213,75 @@ h3 {
 }
 
 #cartasObjetos div {
-    width: 198px;
-    border: 1px solid black;
-    margin: 20px 40px;
-    /* height: 485px;
-    display: flex;
-    flex-direction: column;
-    align-content: space-between; */
+    /* width: 198px; */
+    /* border: 1px solid black; */
+    margin: 10px;
+    /* width: 250px; */
 }
 
-#cartasObjetos div img {
+.card img {
     width: 100%;
+    max-height: 280px;
+    max-width: 240px;
 }
 
-#cartasObjetos div .unidad {
+.card-title {
     text-align: center;
-    font-size: 15px;
-    margin: 20px 40px;
 }
 
-#cartasObjetos div button {
-    width: 30%;
-    margin: 8px 17px;
+.card:hover {
+    background-color: rgba(131, 121, 121, 0.185) !important;
+}
+
+.card {
+    width: 240px;
+    background-color: beige !important;
+}
+
+.card .card-body p {
+    margin: 5px;
+    font-size: 18px;
+}
+
+.card .card-body button {
+    margin-top: 10px;
+}
+
+#donacionSinDestino {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-content: space-around;
+    margin: 15px;
+    max-width: 240px;
+    border: rgba(0, 0, 0, 0.185) 1px solid;
+}
+
+#donacionSinDestino label {
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0px;
+    font-weight: bold;
+}
+
+#donacionSinDestino input {
+    font-size: 17px;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+/*Carrito*/
+
+.carrito {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.carrito h4 {
+    margin-left: 25%;
+    margin-bottom: 3%;
 }
 
 /* SECCIÓN SERVICIO DE PASEO */
@@ -308,8 +309,24 @@ h3 {
     margin: 1% 2%;
 }
 
+.cartaPaseadores {
+    /* background-color: rgb(175, 85, 85);
+    min-height: 400px; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
 /* SECCIÓN FOOTER */
-/* } */
+#pie {
+    height: 4rem;
+    background-color: black;
+}
+
+#pie address {
+    color: #ffffff;
+    font-weight: lighter;
+    text-align: center;
+}
 
 /****TABLET****/
 /* @media (min-width: 481px) and (max-width: 1023px) {
