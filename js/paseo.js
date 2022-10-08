@@ -48,6 +48,23 @@ const buscador = () => {
               `;
                 paseadores.append(cartaPaseadores)
                 break;
+            case "Lavalle":
+            case "Tupungato":
+            case "Tunuyán":
+            case "General Alvear":
+            case "Malargüe":
+                cartaPaseadores.className = ("cartaSinPaseadores");
+                cartaPaseadores.innerHTML = `
+                <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                    <div class="card-header">😕</div>
+                        <div class="card-body">
+                            <h5 class="card-title">SIN PASEADORES DISPONIBLES</h5>
+                            <p class="card-text">Lo siento, en este Departamento no hay paseadores disponibles. ¡Intenta con el próximo más cercano!</p>
+                        </div>
+                    </div>
+                `;
+                paseadores.append(cartaPaseadores)
+                break;
             default:
                 cartaPaseadores.innerHTML = `
                 <h6>David</h6>

@@ -31,7 +31,7 @@ for (const j of objetoDonacion){
     if (j.id !== 99){
       cartaObjetosDonacion.innerHTML = `
       <div class="card">
-        <img src="./imagenes/${j.src}.jpg" class="card-img-top" alt="...">
+        <img src="./imagenes/${j.src}.JPG" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">${j.nombre}</h5>
           <p class="card-text">$${j.precio}</p>
