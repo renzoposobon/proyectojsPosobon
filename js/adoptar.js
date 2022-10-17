@@ -11,21 +11,6 @@ let mascotasEnAdopcion = [
 
 let divPerros = document.getElementById("cartasMascotas");
 
-// for (const i of mascotasEnAdopcion) {
-//     let cartaPerro = document.createElement("div");
-//     cartaPerro.className = ("card")
-//     cartaPerro.innerHTML = `
-//     <img src="./imagenes/${i.nombre}.jpeg" class="card-img-top" alt="...">
-//     <div class="card-body">
-//       <h5 class="card-title">${i.nombre}</h5>
-//       <p class="card-text">${i.edad}</p>
-//       <a href="#" class="btn btn-primary">Go somewhere</a>
-//     </div>
-
-//     `;
-//     divPerros.append(cartaPerro);
-// };
-
 let sumGC = 0;
 let sumLH = 0;
 let sumG = 0;
@@ -49,31 +34,6 @@ fetch("./data.json")
     divPerros.append(cartaPerro);
   });
 })
-
-// const traerDatos = () => {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve(mascotasEnAdopcion);
-//     }, 3000);
-//   });
-// };
-
-// traerDatos()
-// .then(response => {
-//   response.forEach(i => {
-//     let cartaPerro = document.createElement("div");
-//     cartaPerro.innerHTML = `<img src="./imagenes/${i.nombre}.jpeg"></img>
-//                                 <h4>${i.nombre}</h4>
-//                                 <b>${i.edad}</b>
-//                                  <p>${i.ciudad}</p>
-//                                  <button onclick='clickAdoptar(${i.id})' id="botonAdoptar${i.id}">Adoptar</button>
-    
-//          `;
-
-//          divPerros.append(cartaPerro);
-//   });
-// })
-// .catch(error => console.log(error));
 
 for (const i of mascotasEnAdopcion) {
     i.ciudad === "Godoy Cruz" ? sumGC++ : i.ciudad === "Ciudad" ? sumCM++ : i.ciudad === "Las Heras" ? sumLH++ : i.ciudad === "Guaymallen" ? sumG++ : 0
@@ -154,4 +114,4 @@ const clickAdoptar = async (id) => {
 };
 
 let clickBotonAdoptar = document.getElementsByTagName("botonAdoptar[perros.id]");
-clickBotonAdoptar.addEventListener("click", clickAdoptar);
+addEventListener("onclick", clickAdoptar);
