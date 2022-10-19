@@ -39,7 +39,6 @@ const buscador = () => {
               </div>
               `;
                 paseadores.append(cartaPaseadores)
-                localStorage.setItem("Departamento", "Departamentos del Este")
                 break;
             case "Ciudad de Mendoza":
                 cartaPaseadores.innerHTML = `
@@ -54,7 +53,6 @@ const buscador = () => {
               </div>
               `;
                 paseadores.append(cartaPaseadores);
-                localStorage.setItem("Departamento", "Ciudad")
                 break;
             case "Godoy Cruz":
                 cartaPaseadores.innerHTML = `
@@ -69,7 +67,6 @@ const buscador = () => {
               </div>
               `;
                 paseadores.append(cartaPaseadores);
-                localStorage.setItem("Departamento", "Godoy Cruz")
                 break;
                 case "Maipú":
                     cartaPaseadores.innerHTML = `
@@ -84,7 +81,6 @@ const buscador = () => {
                   </div>
                   `;
                     paseadores.append(cartaPaseadores);
-                    localStorage.setItem("Departamento", "Maipú")
                     break;
             case "Luján":
                 cartaPaseadores.innerHTML = `
@@ -99,7 +95,6 @@ const buscador = () => {
               </div>
               `;
                 paseadores.append(cartaPaseadores);
-                localStorage.setItem("Departamento", "Luján")
                 break;
             case "Las Heras":
                 cartaPaseadores.innerHTML = `
@@ -114,7 +109,6 @@ const buscador = () => {
               </div>
               `;
                 paseadores.append(cartaPaseadores);
-                localStorage.setItem("Departamento", "Las Heras")
                 break;
             case "San Rafael":
                 cartaPaseadores.innerHTML = `
@@ -129,7 +123,6 @@ const buscador = () => {
               </div>
               `;
                 paseadores.append(cartaPaseadores);
-                localStorage.setItem("Departamento", "San Rafael")
                 break;
             case "Tunuyán":
             case "Tupungato":
@@ -145,7 +138,6 @@ const buscador = () => {
                   </div>
               `;
               paseadores.append(cartaPaseadores);
-              localStorage.setItem("Departamento", "Departamentos del Valle de Uco")
               break;
             case "General Alvear":
             case "Malargüe":
@@ -160,7 +152,6 @@ const buscador = () => {
                   </div>
               `;
               paseadores.append(cartaPaseadores);
-              localStorage.setItem("Departamento", "General Alvear o Malargüe")
               break;
             case "":
                 break;
@@ -193,9 +184,9 @@ const buscador = () => {
             </div>
             `;
             paseadores.append(cartaPaseadores);
-            localStorage.setItem("Departamento", "Guaymallén")
         }
     }
+    localStorage.setItem("Departamento", dptos.options[dptos.selectedIndex].value)
 }
 
 addEventListener("change", buscador);

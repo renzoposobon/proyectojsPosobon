@@ -16,7 +16,9 @@ let sumLH = 0;
 let sumG = 0;
 let sumCM = 0;
 
-fetch("./data.json")
+const data = fetch("./data.json")
+
+data
 .then(response => response.json())
 .then(data => {
   data.forEach(i => {

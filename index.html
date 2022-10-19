@@ -23,6 +23,7 @@
             <li class="listaEncabezado"><a href="#adoptar">Adoptar</a></li>
             <li class="listaEncabezado"><a href="#donar">Donar</a></li>
             <li class="listaEncabezado"><a href="#servicioPaseo">Servicio de paseo</a></li>
+            <button id="boton-carrito"><i class="fas fa-shopping-cart"></i><span id="contadorCarrito">0</span></button>
         </ul>
     </header>
     <!-- ÍCONO DE SUBIR -->
@@ -105,10 +106,26 @@
       <div>
         <h2 class="titulos">¡TAMBIEN PODES DONAR A NUESTROS REFUGIOS DE ANIMALES!</h2>
       </div>
-      <div id="cartasObjetos">
+      <main id="contenedor-productos">
 
+      </main>
+      <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Carrito</h3>
+            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+            <div id="carrito-contenedor">
+                <!-- <div class="productoEnCarrito">
+                    <p>Buzo 1</p>
+                    <p>Precio: $1200</p>
+                    <button class="boton-eliminar"><i class="fas fa-trash-alt"></i></button>
+                </div> -->
+            </div>
+            <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+            <button id="donar-carrito" class="boton-agregar">Donar</button>
+        </div>
       </div>
-      <div id="carrito" class="carrito">
+      <!-- <div id="carrito" class="carrito">
         <h4>Su carrito:</h4>
         <table class="table">
           <thead>
@@ -124,12 +141,12 @@
 
           </tbody>
           <tfoot id="pieTabla">
-            <tr>
-            </tr>
+
           </tfoot>
         </table>
       </div>
-    </div>
+      </div>
+    </div> -->
     <!-- SECCIÓN SERVICIO DE PASEO -->
     <div id="servicioPaseo" class="paseo">
         <h2 class="titulos">SERVICIO DE PASEO DE PERROS 🐶</h2>
@@ -166,10 +183,12 @@
         &copy; Desarrollado por Renzo Posobon
       </address>
     </footer>
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/luxon@2.3.0/build/global/luxon.min.js"></script> -->
     <script src="./js/adoptar.js"></script>
     <script src="./js/donar.js"></script>
+    <script src="./js/modal.js"></script>
     <script src="./js/paseo.js"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
