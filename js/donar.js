@@ -1,16 +1,16 @@
 /*SECCION DONAR*/
 
 let objetoDonacion = [
-  {id: 1, nombre: "Alimento de perro adulto raza mediana y grande", precio: 578, unidad: "1 kg", src: "comida-perro-raza-mediana-y-grande"},
-  {id: 2, nombre: "Alimento de perro adulta raza pequeña", precio: 1030, unidad: "1 kg", src: "comida-perro-raza-pequeña"},
-  {id: 3, nombre: "Alimento de perro cachorro", precio: 276, unidad: "1 kg", src: "comida-perro-cachorro"},
-  {id: 4, nombre: "Alimento de gato adulto", precio: 260, unidad: "1 kg", src: "comida-gato-adulto"},
-  {id: 5, nombre: "Alimento de gato kitten", precio: 887, unidad: "1 kg", src: "comida-gato-kitten"},
-  {id: 6, nombre: "Snacks perro", precio: 151, unidad: "1", src: "snack-perro"},
-  {id: 7, nombre: "Snacks gato", precio: 148, unidad: "1", src: "snack-gato"},
-  {id: 8, nombre: "Bidon de piedras", precio: 686, unidad: "5.3 kg", src: "bidon-piedras"},
-  {id: 9, nombre: "Kit sanitario", precio: 922, unidad: "1", src: "kit-sanitario"},
-  {id: 10, nombre: "Comedero / Bebedero ", precio: 300, unidad: "1", src: "comedero-bebedero"},
+  {id: 1, nombre: "Alimento de perro adulto raza mediana y grande", precio: 578, unidad: "1 kg", src: "comida-perro-raza-mediana-y-grande.jpg"},
+  {id: 2, nombre: "Alimento de perro adulta raza pequeña", precio: 1030, unidad: "1 kg", src: "comida-perro-raza-pequeña.jpg"},
+  {id: 3, nombre: "Alimento de perro cachorro", precio: 276, unidad: "1 kg", src: "comida-perro-cachorro.jpg"},
+  {id: 4, nombre: "Alimento de gato adulto", precio: 260, unidad: "1 kg", src: "comida-gato-adulto.jpg"},
+  {id: 5, nombre: "Alimento de gato kitten", precio: 887, unidad: "1 kg", src: "comida-gato-kitten.jpg"},
+  {id: 6, nombre: "Snacks perro", precio: 151, unidad: "1", src: "snack-perro.jpg"},
+  {id: 7, nombre: "Snacks gato", precio: 148, unidad: "1", src: "snack-gato.jpg"},
+  {id: 8, nombre: "Bidon de piedras", precio: 686, unidad: "5.3 kg", src: "bidon-piedras.jpg"},
+  {id: 9, nombre: "Kit sanitario", precio: 922, unidad: "1", src: "kit-sanitario.jpg"},
+  {id: 10, nombre: "Comedero / Bebedero ", precio: 300, unidad: "1", src: "comedero-bebedero.jpg"},
   // {id: 99, descripcion: "Donación sin destino"}
 ];
 
@@ -175,41 +175,41 @@ botonVaciar.addEventListener('click', () => {
   actualizarCarrito()
 })
 donarCarrito.addEventListener("click", () => {
-if (carrito.length === 0) {
-  Swal.fire({
-    icon: 'error',
-    title: 'Carrito vacío',
-    text: 'Por favor, agrega un producto',
-  })
-} else {
-  Swal.fire({
-    title: '¡Gracias por donar a nuestros refugios de animales!',
-    width: 600,
-    padding: '3em',
-    color: '#716add',
-    background: '#fff',
-    backdrop: `
-      rgba(0,0,123,0.4)
-      url("https://media.tenor.com/Y4AzOUrW5GQAAAAd/gato-moviendo-la-cabeza-al-ritmo-de-la-musica.gif")
-      left top
-      repeat
-    `,
-    })
-  }
+  if (carrito.length === 0) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Carrito vacío',
+      text: 'Por favor, agrega un producto',
+   })
+  } else {
+    Swal.fire({
+     title: '¡Gracias por donar a nuestros refugios de animales!',
+      width: 600,
+      padding: '3em',
+      color: '#716add',
+     background: '#fff',
+     backdrop: `
+       rgba(0,0,123,0.4)
+        url("https://media.tenor.com/Y4AzOUrW5GQAAAAd/gato-moviendo-la-cabeza-al-ritmo-de-la-musica.gif")
+       left top
+       repeat
+     `,
+     })
+   }
 })
 
 objetoDonacion.forEach((i) => {
-  const div = document.createElement('div')
+  let div = document.createElement('div')
   div.classList = ("producto")
   div.innerHTML = `
-  <img src="./imagenes/${i.src}.JPG" alt= "">
-  <h3>${i.nombre}</h3>
-  <p class="card-text">$${i.precio}</p>
-  <p class="card-text"><small>Unidad: ${i.unidad}</small></p>
-  <button id="agregar${i.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
-  `
+    <img src="./imagenes/${i.src}" alt= "">
+    <h3>${i.nombre}</h3>
+    <p class="card-text">$${i.precio}</p>
+    <p class="card-text"><small>Unidad: ${i.unidad}</small></p>
+    <button id="agregar${i.id}" class="boton-agregar">Agregar <i class="fas fa-shopping-cart"></i></button>
+  `;
   contenedorProductos.appendChild(div)
-  const boton = document.getElementById(`agregar${i.id}`)
+  let boton = document.getElementById(`agregar${i.id}`)
   boton.addEventListener('click', () => {
       agregarAlCarrito(i.id)
   })
@@ -217,23 +217,23 @@ objetoDonacion.forEach((i) => {
 
 
 const agregarAlCarrito = (prodId) => {
-  const existe = carrito.some (prod => prod.id === prodId)
+  let existe = carrito.some (prod => prod.id === prodId)
   if (existe){
-      const prod = carrito.map (prod => {
+      let prod = carrito.map (prod => {
           if (prod.id === prodId){
               prod.cantidad++
           }
       })
   } else {
-      const item = objetoDonacion.find((prod) => prod.id === prodId)
+      let item = objetoDonacion.find((prod) => prod.id === prodId)
       carrito.push(item)
   }
   actualizarCarrito()
 }
 
 const eliminarDelCarrito = (prodId) => {
-  const item = carrito.find((prod) => prod.id === prodId)
-  const indice = carrito.indexOf(item)
+  let item = carrito.find((prod) => prod.id === prodId)
+  let indice = carrito.indexOf(item)
   carrito.splice(indice, 1)  
   actualizarCarrito() 
 }
@@ -241,7 +241,7 @@ const eliminarDelCarrito = (prodId) => {
 const actualizarCarrito = () => {
   contenedorCarrito.innerHTML = ""
   carrito.forEach((prod) => {
-      const div = document.createElement('div')
+      let div = document.createElement('div')
       div.className = ('productoEnCarrito')
       div.innerHTML = `
       <p>${prod.nombre}</p>
