@@ -1,0 +1,13 @@
+[
+    {"ciudad": "San Martín", "nombre": "Juan", "src": "./imagenes/juan.jpg", "p1": "Edad: 31 años", "p2": "3 años de experiencia"},
+    {"ciudad": "San Martín", "nombre": "Sara", "src": "./imagenes/sara.jpg", "p1": "Edad: 28 años", "p2": "5 años de experiencia"},
+    {"ciudad": "San Martín", "nombre": "Denis", "src": "./imagenes/denis.jpg", "p1": "Edad: 30 años", "p2": "2 años de experiencia"},
+    {"ciudad": "Ciudad de Mendoza", "nombre": "Fabián y Nicolás", "src": "./imagenes/fabian-y-nicolas.jpg", "p1": "Edad: 29 años", "p2": "4 años de experiencia"},
+    {"ciudad": "Godoy Cruz", "nombre": "Sabrina", "src": "./imagenes/sabrina.jpg", "p1": "19 años", "p2": "Primer año de experiencia"},
+    {"ciudad": "Maipú", "nombre": "Ruben", "src": "./imagenes/ruben.jpg", "p1": "32 años", "p2": "2 años de experiencia"},
+    {"ciudad": "Guaymallén", "nombre": "Dario", "src": "./imagenes/dario.png", "p1": "Edad: 34 años", "p2": "5 años de experiencia"},
+    {"ciudad": "Guaymallén", "nombre": "Nicolás", "src": "./imagenes/nicolas.jpg", "p1": "Edad: 25 años", "p2": "Primer año de experiencia"},
+    {"ciudad": "San Rafael", "nombre": "Florencia", "src": "./imagenes/florencia.jpg", "p1": "Edad 25 años", "p2": "3 años de experiencia"},
+    {"ciudad": "Luján", "nombre": "Federico", "src": "./imagenes/federico.jpeg", "p1": "30 años", "p2": "2 años de experiencia"},
+    {"ciudad": "Las Heras", "nombre": "Sebastian", "src": "./imagenes/sebastian.jpg", "p1": "26 años", "p2": "2 años de experiencia"}
+]

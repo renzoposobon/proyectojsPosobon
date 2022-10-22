@@ -18,10 +18,22 @@ body {
 #cabeza {
     background-image: linear-gradient(to right, #3eadcf, #abe9cd);
     height: auto;
-    position: fixed;
+    position: sticky;
     width: 100%;
     z-index: 1;
 }
+
+/* .cabeza-carrito {
+    display: none;
+}
+
+.cabeza-fuera {
+    background-image: linear-gradient(to right, #3eadcf, #abe9cd);
+    height: auto;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+} */
 
 ul {
     display: flex;
@@ -52,10 +64,10 @@ ul li a {
 #boton-carrito {
     border: none;
     color: royalblue;
-    font-size: 40px;
+    font-size: 34px;
     background-color: white;
     border-radius: 50%;
-    padding: 10px 20px;
+    padding: 10px 15px;
     transition: all .3s;
 }
 #boton-carrito:hover {
@@ -127,7 +139,7 @@ ul li a {
     background-color: rgb(219, 203, 203);
 }
 
-p {
+.texto p {
     text-align: center;
     font-size: 23px;
     margin: 20px 40px;
@@ -147,15 +159,6 @@ p {
     flex-direction: row;
 }
 
-
-
-p {
-    text-align: center;
-    font-size: 23px;
-    margin: 20px 40px;
-    max-width: 500px;
-}
-
 /* SECCIÓN ADOPTAR */
 
 #adoptar div .titulos {
@@ -164,6 +167,9 @@ p {
 
 #cantidadMascotas {
     margin: 4% 30%;
+    text-align: center;
+    font-size: 23px;
+    max-width: 500px;
 }
 
 #cartasMascotas {
@@ -176,12 +182,17 @@ p {
 
 #cartasMascotas div {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
     margin: 10px 20px;
     width: 220px;
+    max-height: 450px;
+}
+
+#cartasMascotas img {
+    max-height: 270px;
 }
 
 .swal2-confirm {
@@ -231,17 +242,15 @@ h3 {
     max-width: 1200px;
     margin: 60px auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     flex-wrap: wrap;
 }
 
-p {
-    line-height: 1.8;
-}
+
 .producto {
     max-width: 20%;
     padding: 10px;
-    margin: 10px;
+    margin: 2%;
     margin-bottom: 20px;
     box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.3);
 }
@@ -257,9 +266,11 @@ p {
     border: none;
     margin: 5px;
 }
+
 .boton-agregar:hover {
     cursor: pointer;
 }
+
 .boton-agregar:focus {
     outline: none;
 }
@@ -281,6 +292,7 @@ p {
 .modal-active {
     opacity: 1;
     visibility: visible;
+    z-index: 1;
 }
 
 .modal-carrito {
@@ -289,15 +301,22 @@ p {
     justify-content: center;
     position: relative;
     background-color: white;
-    min-width: 500px;
+    width: 600px;
     padding: 20px;
     margin-top: -100%;
     transition: all .5s;
+    overflow: scroll;
 }
 
 .modal-active .modal-carrito {
     margin-top: 0;
+    font-size: 17px;
 }
+
+.modal-active .modal-carrito p {
+    font-size: 17px;
+}
+
 
 .modal-carrito h3 {
     color: royalblue;
@@ -320,7 +339,11 @@ p {
 }
 .modal-carrito .precioProducto {
     padding-top: 10px;
-    
+}
+
+.modal-carrito div button:hover {
+    background-color: white;
+    color: royalblue;
 }
 
 .productoEnCarrito {
@@ -350,46 +373,13 @@ p {
     outline: none;
 }
 
-/* #cartasObjetos {
+#cartasObjetos {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
-
-#cartasObjetos div {
-
-    margin: 10px;
-}
-
-.card img {
-    width: 100%;
-    max-height: 280px;
-    max-width: 240px;
-}
-
-.card-title {
-    text-align: center;
-}
-
-.card:hover {
-    background-color: rgba(131, 121, 121, 0.185) !important;
-}
-
-.card {
-    width: 240px;
-    background-color: beige !important;
-}
-
-.card .card-body p {
-    margin: 5px;
-    font-size: 18px;
-}
-
-.card .card-body button {
-    margin-top: 10px;
-}
-
+/*
 #donacionSinDestino {
     display: flex;
     justify-content: center;
@@ -412,27 +402,6 @@ p {
     font-size: 17px;
     text-align: center;
     margin: 10px 0px;
-} */
-
-/*Carrito*/
-
-/* .carrito {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.carrito h4 {
-    margin-left: 25%;
-    margin-bottom: 3%;
-}
-
-th button {
-    width: 30px;
-    height: 30px;
-    margin: 5px 5px 5px 0px;
-    text-align: center;
-    font-weight: bold;
 } */
 
 /* SECCIÓN SERVICIO DE PASEO */
@@ -461,23 +430,41 @@ th button {
 }
 
 .cartaPaseadores {
-    /* background-color: rgb(175, 85, 85);
-    min-height: 400px; */
+    max-width: 250px;
     display: flex;
-    justify-content: space-evenly;
-    margin: 1% 2% 2% 2%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin: 15px;
+    opacity: 0.9;
 }
 
 .cartaPaseadores img {
     min-height: 200px;
+    max-height: 280px;
 }
 
 .cartaPaseadores:hover {
-    opacity: 1 !important;
+    opacity: 1;
+    zoom: 1.04;
+    border: black solid;
+}
+
+.cartaPaseadores div h5 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.cartaPaseadores div p {
+    font-size: 17px;
+    line-height: 1;
 }
 
 .cartaSinPaseadores {
     margin: 2%;
+    max-width: 250px !important;
+    text-align: center;
 }
 
 .cartaSinPaseadores:hover {

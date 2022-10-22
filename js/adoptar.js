@@ -6,7 +6,7 @@ let mascotasEnAdopcion = [
     {id: 4, nombre: "Pelu", edad: "5 años", ciudad: "Las Heras"},
     {id: 5, nombre: "Milaneso", edad: "6 años", ciudad: "Las Heras" },
     {id: 6, nombre: "Memonia", edad: "2 años", ciudad: "Las Heras" },
-    {id: 7, nombre: "Felisa", edad: "1 año y medio", ciudad: "Ciudad" }
+    {id: 7, nombre: "Felisa", edad: "1 año", ciudad: "Ciudad" }
 ];
 
 let divPerros = document.getElementById("cartasMascotas");
@@ -17,6 +17,7 @@ let sumG = 0;
 let sumCM = 0;
 
 const data = fetch("./data.json")
+// const fetch = await data.json()
 
 data
 .then(response => response.json())
@@ -38,8 +39,8 @@ data
 })
 
 for (const i of mascotasEnAdopcion) {
-    i.ciudad === "Godoy Cruz" ? sumGC++ : i.ciudad === "Ciudad" ? sumCM++ : i.ciudad === "Las Heras" ? sumLH++ : i.ciudad === "Guaymallen" ? sumG++ : 0
-};
+  i.ciudad === "Godoy Cruz" ? sumGC++ : i.ciudad === "Ciudad" ? sumCM++ : i.ciudad === "Las Heras" ? sumLH++ : i.ciudad === "Guaymallen" ? sumG++ : 0
+}
 
 let secSumador = document.createElement("seccion");
 secSumador.className = ("seccionMascotas")
@@ -72,7 +73,6 @@ const clickAdoptar = async (id) => {
     const { value: email } = await Swal.fire({
       title: 'Ingrese su email',
       input: 'email',
-      // inputLabel: 'Your email address',
       inputPlaceholder: '@gmail.com'
     })
     
@@ -100,16 +100,13 @@ const clickAdoptar = async (id) => {
           swalWithBootstrapButtons.fire(
             'Usted ha adoptado una mascota ❤',
             '¡Un refugio de animales se contactará con usted!',
-            'success'
+            'success',
           )
         } else if (
-          /* Read more about handling dismissals below */
           result.dismiss === Swal.DismissReason.cancel
         ) {
           swalWithBootstrapButtons.fire(
             'Adopción cancelada',
-            // 'Your imaginary file is safe :)',
-            // 'error'
           )
         }
       })
