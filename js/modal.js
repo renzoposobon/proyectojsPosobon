@@ -21,3 +21,20 @@ modalCarrito.addEventListener('click', (event) => {
     event.stopPropagation()
     cabeza.classList = ("cabeza-fuera")
 })
+
+
+let pulso = document.querySelector('.pulso');
+
+pulso.addEventListener('animationend', () => {
+    pulso.classList.remove('animate');
+});
+
+let ejecutarPulso = () => {
+    setInterval(() => {
+        pulso.classList.add('animate')
+    },7000);
+};
+
+window.addEventListener('load',() =>{
+    ejecutarPulso()
+});

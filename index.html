@@ -36,6 +36,42 @@
         </li>
       </ul>
     </div>
+    <!--WHATSAPP-->
+    <div class="wahtsapp_container">
+      <a id="wahtsapp_pop" class="wahtsapp_pop"><ion-icon class="wahtsapp_pop_icono" name="logo-whatsapp"></ion-icon><span class="pulso"></span></a>
+      <div class="wahtsapp_chat_container">
+          <div class="wahtsapp_chat_title">
+              <div class="title_img">
+                  <img src="imagenes/avatar.png" alt="Avatar">
+              </div>
+              <div class="title_text">
+                  <h2 class="title_text_name">Renzo Posobon</h2>
+                  <p class="title_text_subname">Desarrollador Front End</p>
+              </div>
+          </div>
+          <div class="wahtsapp_chat">
+              <div id="chat_1" class="chat_container">
+                  <strong class="chat_title">Renzo Posobon</strong>
+                  <p class="chat_txt">Hola, ¿Cómo estas? 👋</p>
+                  <span class="chat_hs">11:24</span>
+              </div>
+              <div id="chat_2" class="chat_container">
+                  <p class="chat_txt">¿En qué te puedo ayudar?</p>
+                  <span class="chat_hs">11:24</span>
+              </div>
+              <div id="chat_dots" class="chat_container">
+                  <div class="chat_dots_container">
+                      <span class="chat_dots"></span>
+                      <span class="chat_dots"></span>
+                      <span class="chat_dots"></span>
+                  </div>
+              </div>
+          </div>
+          <div class="wahtsapp_send">
+              <a href="https://api.whatsapp.com/send?phone=5492612054958&text=Hola%21%20Como%20estas?%20" class="wahtsapp_send_enlace" target="_blank"><ion-icon class="wahtsapp_send_icono" name="logo-whatsapp"></ion-icon><strong class="wahtsapp_send_txt" >Iniciar Chat</strong></a>
+          </div>
+      </div>
+    </div>
     <!-- SECCIÓN INICIO-->
     <div id="inicio">
         <h1>BIENVENIDO A MUNDO MASCOTAS</h1>
@@ -84,7 +120,7 @@
               Mundo Mascotas nace como una iniciativa para conectar a personas que den en adopción a mascotas y a personas que deseen adoptarlas.
             </p>
             <p>
-              A su vez, para aquellos que quieran colaborar pero no pueden adoptar una mascota, tienen la opción de donar productos de primera necesidad para perros y gatos que se encuentran alojados en refugios de animales en Mendoza.
+              A su vez, para aquellos que quieran colaborar pero no pueden adoptar una mascota, tienen la opción de donar productos de primera necesidad para perros y gatos que se encuentran alojados en refugios de animales de Mendoza.
             </p>
         </div>
     </div>
@@ -92,8 +128,10 @@
     <!-- SECCIÓN ADOPTAR -->
     <div id="adoptar">
       <div>
-          <h2 class="titulos">EN ESTA SECCIÓN PODES ELEGIR LA MASCOTA QUE QUIERAS ADOPTAR CON MUCHO AMOR</h2>
-          <p id="cantidadMascotas">
+          <h2 class="titulos">ADOPTAR</h2>
+          <p class="mascotas">En esta sección podés elegir la mascota que quieras adoptar</p>
+          <p class="mascotas">La única condición es querer hacerlo <b>con mucho amor y compromiso</b></p>
+          <p class="mascotas" id="cantidadMascotas">
 
           </p>
       </div>
@@ -104,7 +142,9 @@
     <!-- SECCIÓN DONAR -->
     <div id="donar">
       <div>
-        <h2 class="titulos">¡TAMBIEN PODES DONAR A NUESTROS REFUGIOS DE ANIMALES!</h2>
+        <h2 class="titulos">DONAR</h2>
+        <p class="mascotas" id="desc">
+        </p>
       </div>
       <main id="contenedor-productos">
 
@@ -156,8 +196,11 @@
         &copy; Desarrollado por Renzo Posobon
       </address>
     </footer>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/whatsapp.js"></script>
     <script src="./js/adoptar.js"></script>
     <script src="./js/donar.js"></script>
     <script src="./js/modal.js"></script>

@@ -160,6 +160,12 @@ let contadorCarrito = document.getElementById('contadorCarrito')
 let cantidad = document.getElementById('cantidad')
 let precioTotal = document.getElementById('precioTotal')
 let cantidadTotal = document.getElementById('cantidadTotal')
+let palabras = document.getElementById("desc")
+
+palabras.innerText = `
+    Si querés ayudar a perros o gatos sin hogar, también tenés la opción de donar algun producto de primera necesidad a algún refugio de animales.\nEs muy sencillo: Simplemente elegí el producto, hacé click en relación a la cantidad que quieras donar, luego dirígite hacia el carrito (en el menú) y doná.
+`
+
 
 let carrito = []
 
