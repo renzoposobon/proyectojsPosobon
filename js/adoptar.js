@@ -6,16 +6,16 @@ let mascotasEnAdopcion = [
     {nombre: "Pelu", edad: "5 años", ciudad: "Las Heras", src: "Pelu.jpeg"},
     {nombre: "Milaneso", edad: "6 años", ciudad: "Las Heras", src: "Milaneso.jpeg"},
     {nombre: "Memonia", edad: "2 años", ciudad: "Las Heras", src: "Memonia.jpeg"},
-    {nombre: "Bob", edad: "3 años", ciudad: "Godoy Cruz", src: "Bob.jpeg"},
     {nombre: "Felisa", edad: "1 año", ciudad: "Ciudad", src: "Felisa.jpeg"},
+    {nombre: "Bob", edad: "3 años", ciudad: "Godoy Cruz", src: "Bob.jpeg"},
     {nombre: "Munay", edad: "1 año", ciudad: "Maipú", src: "Munay.jpeg"},
     {nombre: "Munina", edad: "9 años", ciudad: "Maipú", src: "Munina.jpeg"},
     {nombre: "Chiquita", edad: "4 años", ciudad: "Maipú", src: "Chiquita.jpeg"},
     {nombre: "Odín", edad: "4 años", ciudad: "Ciudad", src: "Odin.jpeg"},
-    {nombre: "Sirius", edad: "2 años", ciudad: "Maipú", src: "Sirius.jpg"},
-    {nombre: "Catalina", edad: "8 años", ciudad: "Maipú", src: "Catalina.jpg"},
-    {nombre: "Floricienta", edad: "1 años", ciudad: "Maipú", src: "Floricienta.jpg"},
-    {nombre: "Juan", edad: "2 años", ciudad: "Maipú", src: "JuanG.jpg"},
+    {nombre: "Sirius", edad: "2 años", ciudad: "Maipú", src: "Sirius.png"},
+    {nombre: "Catalina", edad: "8 años", ciudad: "Maipú", src: "Catalina.png"},
+    {nombre: "Floricienta", edad: "1 años", ciudad: "Maipú", src: "Floricienta.png"},
+    {nombre: "Juan", edad: "2 años", ciudad: "Maipú", src: "JuanG.png"},
     {nombre: "Apolo", edad: "1 año", ciudad: "Ciudad", src: "Apolo.jpeg"}
 ];
 

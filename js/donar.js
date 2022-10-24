@@ -1,16 +1,16 @@
 /*SECCION DONAR*/
 
 let objetoDonacion = [
-  {id: 1, nombre: "Alimento de perro adulto raza mediana y grande", precio: 578, unidad: "1 kg", src: "comida-perro-raza-mediana-y-grande.jpg"},
-  {id: 2, nombre: "Alimento de perro adulta raza pequeña", precio: 1030, unidad: "1 kg", src: "comida-perro-raza-pequeña.jpg"},
-  {id: 3, nombre: "Alimento de perro cachorro", precio: 276, unidad: "1 kg", src: "comida-perro-cachorro.jpg"},
-  {id: 4, nombre: "Alimento de gato kitten", precio: 887, unidad: "1 kg", src: "comida-gato-kitten.jpg"},
-  {id: 5, nombre: "Alimento de gato adulto", precio: 260, unidad: "1 kg", src: "comida-gato-adulto.jpg"},
-  {id: 6, nombre: "Snacks perro", precio: 151, unidad: "1", src: "snack-perro.jpg"},
-  {id: 7, nombre: "Snacks gato", precio: 148, unidad: "1", src: "snack-gato.jpg"},
-  {id: 8, nombre: "Bidon de piedras", precio: 686, unidad: "5.3 kg", src: "bidon-piedras.jpg"},
-  {id: 9, nombre: "Kit sanitario", precio: 922, unidad: "1", src: "kit-sanitario.jpg"},
-  {id: 10, nombre: "Comedero / Bebedero ", precio: 300, unidad: "1", src: "comedero-bebedero.jpg"},
+  {id: 1, nombre: "Alimento de perro adulto raza mediana y grande", precio: 578, unidad: "1 kg", src: "comida-perro-raza-mediana-y-grande.png"},
+  {id: 2, nombre: "Alimento de perro adulta raza pequeña", precio: 1030, unidad: "1 kg", src: "comida-perro-raza-pequeña.png"},
+  {id: 3, nombre: "Alimento de perro cachorro", precio: 276, unidad: "1 kg", src: "comida-perro-cachorro.png"},
+  {id: 4, nombre: "Alimento de gato kitten", precio: 887, unidad: "1 kg", src: "comida-gato-kitten.png"},
+  {id: 5, nombre: "Alimento de gato adulto", precio: 260, unidad: "1 kg", src: "comida-gato-adulto.png"},
+  {id: 6, nombre: "Snacks perro", precio: 151, unidad: "1", src: "snack-perro.png"},
+  {id: 7, nombre: "Snacks gato", precio: 148, unidad: "1", src: "snack-gato.png"},
+  {id: 8, nombre: "Bidon de piedras", precio: 686, unidad: "5.3 kg", src: "bidon-piedras.png"},
+  {id: 9, nombre: "Kit sanitario", precio: 922, unidad: "1", src: "kit-sanitario.png"},
+  {id: 10, nombre: "Comedero / Bebedero ", precio: 300, unidad: "1", src: "comedero-bebedero.png"},
   // {id: 99, descripcion: "Donación sin destino"}
 ];
 

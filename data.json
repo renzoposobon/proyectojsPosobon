@@ -1,9 +1,19 @@
 [
-    {"id": 1, "nombre": "Rocco", "edad": "10 años", "ciudad": "Godoy Cruz"},
-    {"id": 2, "nombre": "Luna", "edad": "7 años", "ciudad": "Godoy Cruz"},
-    {"id": 3, "nombre": "Simur", "edad": "11 años", "ciudad": "Guaymallen"},
-    {"id": 4, "nombre": "Pelu", "edad": "5 años", "ciudad": "Las Heras"},
-    {"id": 5, "nombre": "Milaneso", "edad": "6 años", "ciudad": "Las Heras" },
-    {"id": 6, "nombre": "Memonia", "edad": "2 años", "ciudad": "Las Heras" },
-    {"id": 7, "nombre": "Felisa", "edad": "1 año", "ciudad": "Ciudad" }
+    {"nombre": "Rocco", "edad": "10 años", "ciudad": "Godoy Cruz", "src": "Rocco.jpeg"},
+    {"nombre": "Luna", "edad": "7 años", "ciudad": "Godoy Cruz", "src": "Luna.jpeg"},
+    {"nombre": "Simur", "edad": "11 años", "ciudad": "Guaymallen", "src": "Simur.jpeg"},
+    {"nombre": "Pelu", "edad": "5 años", "ciudad": "Las Heras", "src": "Pelu.jpeg"},
+    {"nombre": "Milaneso", "edad": "6 años", "ciudad": "Las Heras", "src": "Milaneso.jpeg" },
+    {"nombre": "Memonia", "edad": "2 años", "ciudad": "Las Heras" , "src": "Memonia.jpeg"},
+    {"nombre": "Felisa", "edad": "1 año", "ciudad": "Ciudad", "src": "Felisa.jpeg"},
+    {"nombre": "Bob", "edad": "3 años", "ciudad": "Godoy Cruz", "src": "Bob.jpeg"},
+    {"nombre": "Munay", "edad": "1 año", "ciudad": "Maipú", "src": "Munay.jpeg"},
+    {"nombre": "Munina", "edad": "9 años", "ciudad": "Maipú", "src": "Munina.jpeg"},
+    {"nombre": "Chiquita", "edad": "4 años", "ciudad": "Maipú", "src": "Chiquita.png"},
+    {"nombre": "Odín", "edad": "4 años", "ciudad": "Ciudad", "src": "Odin.jpeg"},
+    {"nombre": "Sirius", "edad": "2 años", "ciudad": "Maipú", "src": "Sirius.png"},
+    {"nombre": "Catalina", "edad": "8 años", "ciudad": "Maipú", "src": "Catalina.png"},
+    {"nombre": "Floricienta", "edad": "1 años", "ciudad": "Maipú", "src": "Floricienta.jpg"},
+    {"nombre": "Juan", "edad": "2 años", "ciudad": "Maipú", "src": "JuanG.png"},
+    {"nombre": "Apolo", "edad": "1 año", "ciudad": "Ciudad", "src": "Apolo.jpeg"}
 ]
