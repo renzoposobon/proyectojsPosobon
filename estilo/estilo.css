@@ -32,9 +32,10 @@ body::-webkit-scrollbar-thumb:hover {
 #cabeza {
     background-image: linear-gradient(to right, #3eadcf, #abe9cd);
     height: auto;
-    position: sticky;
+    position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
+    top: 0;
 }
 
 /* .cabeza-carrito {
@@ -429,6 +430,7 @@ ul li a {
 #inicio {
     display: flex;
     justify-content: center;
+    margin-top: 50px;
 }
 
 #inicio img{
@@ -996,9 +998,10 @@ h3 {
 #cabeza {
     background-image: linear-gradient(to right, #3eadcf, #abe9cd);
     height: auto;
-    position: sticky;
+    position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
+    top: 0;
 }
 
 ul {
@@ -1374,6 +1377,7 @@ ul li a {
 #inicio {
     display: flex;
     justify-content: center;
+    margin-top: 50px;
 }
 
 #inicio img{
@@ -1482,60 +1486,7 @@ ul li a {
 
 
 #cartasMascotas .card {
-    animation-name: mover;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-    animation-duration: 3s;
-    animation-delay: 0s;
-    cursor: pointer;
     margin: 40px 30px;
-}
-
-@keyframes mover {
-    0% {
-        transform: rotate(0deg);
-        box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.301);
-    }
-    10% {
-        transform: rotate(1deg);
-        box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.356);
-    }
-    20% {
-        transform: rotate(2deg);
-        box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.411);
-    }
-    30% {
-        transform: rotate(3deg);
-        box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.486);
-    }
-    40% {
-        transform: rotate(2deg);
-        box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.527);
-    }
-    50% {
-        transform: rotate(1deg);
-        box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.589);
-    }
-    60% {
-        transform: rotate(0deg);
-        box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.671);
-    }
-    70% {
-        transform: rotate(-1deg);
-        box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.726);
-    }
-    80% {
-        transform: rotate(-2deg);
-        box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.815);
-    }
-    90% {
-        transform: rotate(-3deg);
-        box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.897);
-    }
-    100% {
-        transform: rotate(0deg);
-        box-shadow: 2px 6px 3px 3px rgb(0, 0, 0);
-    }
 }
 
 #cartasMascotas div {
@@ -1868,9 +1819,10 @@ h3 {
     #cabeza {
         background-image: linear-gradient(to right, #3eadcf, #abe9cd);
         height: auto;
-        position: sticky;
+        position: fixed;
         width: 100%;
-        z-index: 1;
+        z-index: 2;
+        top: 0;
     }
     
     ul {
@@ -2246,6 +2198,7 @@ h3 {
     #inicio {
         display: flex;
         justify-content: center;
+        margin-top: 50px;
     }
     
     #inicio img{
@@ -2350,60 +2303,13 @@ h3 {
     }
     
     #cartasMascotas .card {
-        animation-name: mover;
+        /* animation-name: mover;
         animation-iteration-count: infinite;
         animation-timing-function: ease-in;
         animation-duration: 3s;
         animation-delay: 0s;
-        cursor: pointer;
+        cursor: pointer; */
         margin: 40px 30px;
-    }
-    
-    @keyframes mover {
-        0% {
-            transform: rotate(0deg);
-            box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.301);
-        }
-        10% {
-            transform: rotate(1deg);
-            box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.356);
-        }
-        20% {
-            transform: rotate(2deg);
-            box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.411);
-        }
-        30% {
-            transform: rotate(3deg);
-            box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.486);
-        }
-        40% {
-            transform: rotate(2deg);
-            box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.527);
-        }
-        50% {
-            transform: rotate(1deg);
-            box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.589);
-        }
-        60% {
-            transform: rotate(0deg);
-            box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.671);
-        }
-        70% {
-            transform: rotate(-1deg);
-            box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.726);
-        }
-        80% {
-            transform: rotate(-2deg);
-            box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.815);
-        }
-        90% {
-            transform: rotate(-3deg);
-            box-shadow: 2px 6px 3px 3px rgba(0, 0, 0, 0.897);
-        }
-        100% {
-            transform: rotate(0deg);
-            box-shadow: 2px 6px 3px 3px rgb(0, 0, 0);
-        }
     }
     
     /* #cartasMascotas div {
