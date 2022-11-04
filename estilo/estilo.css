@@ -431,7 +431,7 @@ ul li a {
 #inicio {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 #inicio img{
@@ -1870,6 +1870,7 @@ h3 {
     .subir {
         position: fixed;
         z-index: 1;
+        display: none;
     }
     
     .iconoSubir {
