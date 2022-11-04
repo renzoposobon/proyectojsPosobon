@@ -84,6 +84,7 @@ ul li a {
     border-radius: 50%;
     padding: 10px 15px;
     transition: all .3s;
+    margin-right: 30px;
 }
 #boton-carrito:hover {
     cursor: pointer;
@@ -997,7 +998,7 @@ h3 {
 @media (min-width: 486px) and (max-width: 1023px) {
 #cabeza {
     background-image: linear-gradient(to right, #3eadcf, #abe9cd);
-    height: auto;
+    height: 64px;
     position: fixed;
     width: 100%;
     z-index: 2;
@@ -1038,15 +1039,16 @@ ul li a {
     border-radius: 50%;
     padding: 8px 12px;
     transition: all .3s;
+    margin-right: 25px;
 }
 
 /* ÍCONO SUBIR */
 
 .subir {
     position: absolute;
-    top: 76%;
+    top: 87%;
     /* left: 85%; */
-    right: 93%;
+    right: 94%;
 }
 
 .iconoSubir {
@@ -1496,7 +1498,7 @@ ul li a {
     flex-direction: column;
     box-sizing: border-box;
     margin: 10px 20px;
-    width: 220px;
+    width: 190px;
     max-height: 450px;
 }
 
@@ -1853,19 +1855,21 @@ h3 {
 
     #boton-carrito {
         border: none;
-        color: white;
+        color: royalblue;
         font-size: 20px;
-        background-color: royalblue;
+        background-color: white;
         border-radius: 50%;
         padding: 6px 9px;
         transition: all .3s;
-        width: 70px;
+        width: 65px;
+        margin-right: 10px;
     }
     
     /* ÍCONO SUBIR */
     
     .subir {
         position: fixed;
+        z-index: 1;
     }
     
     .iconoSubir {
@@ -1873,8 +1877,8 @@ h3 {
         width: 43px;
         z-index: 1;
         position: fixed;
-        top: 75%;
-        left: 81%;
+        top: 88%;
+        left: 84%;
     }
     
     /* WHATSAPP */
@@ -1883,8 +1887,6 @@ h3 {
         position: fixed;
         bottom: 0px;
         z-index: 9999999;
-        top: 75%;
-        left: 3%;
       }
     .wahtsapp_container .wahtsapp_pop {
         width: 50px;
@@ -2303,52 +2305,34 @@ h3 {
     }
     
     #cartasMascotas .card {
-        /* animation-name: mover;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in;
-        animation-duration: 3s;
-        animation-delay: 0s;
-        cursor: pointer; */
         margin: 40px 30px;
-    }
-    
-    /* #cartasMascotas div {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        box-sizing: border-box;
-        margin: 10px 20px;
-        width: 220px;
-        max-height: 450px;
-    }
-    
-    #cartasMascotas img {
-        max-height: 265px;
-        height: 265px;
-    } */
-    
-    #cartasMascotas .card .card-body .card-text {
-        margin: 0;
-        margin-bottom: 8px;
-    }
-
-    #cartasMascotas {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin: 1%;
     }
     
     #cartasMascotas div {
         display: flex;
-        /* justify-content: center; */
         align-items: center;
         flex-direction: column;
         box-sizing: border-box;
-        margin: 10px 20px;
-        width: 220px;
-        max-height: 450px;
+        margin: 0px 15px;
+        width: 150px;
+        max-height: 400px;
     }
+    
+    #cartasMascotas img {
+        height: 220px;
+    } 
+    
+    #cartasMascotas .card .card-body .card-text {
+        margin: 0;
+        margin-bottom: 8px;
+        font-size: 15px;
+    }
+
+    #cartasMascotas .card .card-body button{
+        font-size: 14px;
+    }
+
+
     
     #cartasMascotas img {
         max-height: 270px;

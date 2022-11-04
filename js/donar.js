@@ -81,6 +81,21 @@ objetoDonacion.forEach((i) => {
   let boton = document.getElementById(`agregar${i.id}`)
   boton.addEventListener('click', () => {
       agregarAlCarrito(i.id)
+      const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-start',
+        showConfirmButton: false,
+        timer: 2500,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener('mouseenter', Swal.stopTimer)
+          toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+      })  
+      Toast.fire({
+        icon: 'success',
+        title: 'Producto agregado'
+      });
   })
 })
 
